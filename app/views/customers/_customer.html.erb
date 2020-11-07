@@ -1,0 +1,15 @@
+<div>
+  <div>
+    <% if customer.image.present? %>
+      <%=image_tag customer.image%>
+    <% end %>
+
+    <div>
+      <p><b>Name:</b> <%=cusomter.full_name%></p>
+      <p><b>Phone Number:</b> <%=customer.phone_number%></p>
+      <p><b>Email:</b> <%=customer.email%></p>
+      <p><b>Notes:</b> <%=customer.notes%></p>
+    </div>
+
+  </div>
+</div>
