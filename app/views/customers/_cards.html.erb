@@ -1,0 +1,8 @@
+<div class="columns">
+    <% @customers.each do |customer| %>
+      <div class="column">
+        <%# Is this the best way to get a view scoped variable to a partial? Would it be better practice to avoid this? %>
+        <%= render partial: "customers/customer", object: customer %>
+      </div>
+    <% end %>
+  </div>

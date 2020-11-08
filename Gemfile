@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.1'
 
+# Bulma for style
+gem 'bulma-rails', "~>0.9.0"
+
 # Admin panel gem
 gem 'activeadmin'
 gem 'devise'

@@ -1,15 +1,23 @@
-<div>
-  <div>
-    <% if customer.image.present? %>
-      <%=image_tag customer.image%>
-    <% end %>
-
-    <div>
-      <p><b>Name:</b> <%=cusomter.full_name%></p>
-      <p><b>Phone Number:</b> <%=customer.phone_number%></p>
-      <p><b>Email:</b> <%=customer.email%></p>
-      <p><b>Notes:</b> <%=customer.notes%></p>
+<div class="card">
+  <div class="card-header">
+    <div class="card-header-title">
+      <p><%=customer.full_name%></p>
     </div>
-
   </div>
+  <% if customer.image.present? %>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <%= image_tag customer.image, alt: "profile picture" %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="content">
+        <p><b>Phone Number:</b> <%=customer.phone_number%></p>
+        <% if customer.email_address.present? %>
+          <p><b>Email:</b> <%=customer.email_address%></p>
+        <% end %>
+        <p><b>Notes:</b> <%=customer.notes%></p>
+      </div>
+    </div>
+  <% end %>
 </div>
